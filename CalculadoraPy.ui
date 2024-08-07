@@ -1,0 +1,1123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Calculadora</class>
+ <widget class="QWidget" name="Calculadora">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>400</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>400</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Calculadora</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+	background-color: rgb(0, 0, 0);
+}</string>
+  </property>
+  <widget class="QFrame" name="Top">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>381</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QFrame{
+background-color: rgb(15, 15, 15);
+}
+</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QFrame" name="LastDisplay">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>341</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(25,25,25);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="Display">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>16</x>
+       <y>10</y>
+       <width>311</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Tahoma</family>
+       <pointsize>14</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+    border: 0.5px solid rgb(70,70,70);
+    background-color: rgb(0, 170, 127);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="Marca">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>0</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Eras Demi ITC</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>APOLO</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Modelo">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>10</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Rounded MT Bold</family>
+      <pointsize>9</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>FX-2001</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="Bot">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>150</y>
+     <width>381</width>
+     <height>441</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(15, 15, 15);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QPushButton" name="BtnDEL">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>57</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(11, 137, 255);
+border-radius: 7px;
+}
+QPushButton:pressed {
+background-color: rgb(1, 111, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Calculadora Python/Iconos/DEL_AC/DEL.png</normaloff>Calculadora Python/Iconos/DEL_AC/DEL.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnAC">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>20</y>
+      <width>57</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(255, 88, 88);
+border-radius: 7px;
+}
+QPushButton:pressed {
+background-color: rgb(255, 43, 43);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Calculadora Python/Iconos/DEL_AC/AC.png</normaloff>Calculadora Python/Iconos/DEL_AC/AC.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnON">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>20</y>
+      <width>57</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(70, 70, 70);
+border-radius: 7px;
+}
+QPushButton:pressed {
+background-color: rgb(35, 35, 35);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Calculadora Python/Iconos/ON_OFF/Encendido.png</normaloff>Calculadora Python/Iconos/ON_OFF/Encendido.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnOFF">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>20</y>
+      <width>57</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(70, 70, 70);
+border-radius: 7px;
+}
+QPushButton:pressed {
+background-color: rgb(35, 35, 35);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Calculadora Python/Iconos/ON_OFF/Apagado.png</normaloff>Calculadora Python/Iconos/ON_OFF/Apagado.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnLn">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>90</y>
+      <width>65</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(170,170,170);
+border-radius: 10px;
+}
+QPushButton:pressed {
+background-color: rgb(120,120, 120);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Calculadora Python/Iconos/Operadores/Logaritmo_natural.png</normaloff>Calculadora Python/Iconos/Operadores/Logaritmo_natural.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnLog">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>90</y>
+      <width>65</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(170,170,170);
+border-radius: 10px;
+}
+QPushButton:pressed {
+background-color: rgb(120,120, 120);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Calculadora Python/Iconos/Operadores/Logaritmo.png</normaloff>Calculadora Python/Iconos/Operadores/Logaritmo.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnExp2">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>90</y>
+      <width>65</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(170,170,170);
+border-radius: 10px;
+}
+QPushButton:pressed {
+background-color: rgb(120,120, 120);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Calculadora Python/Iconos/Operadores/Potencia_2.png</normaloff>Calculadora Python/Iconos/Operadores/Potencia_2.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnExp3">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>90</y>
+      <width>65</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(170,170,170);
+border-radius: 10px;
+}
+QPushButton:pressed {
+background-color: rgb(120,120, 120);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Calculadora Python/Iconos/Operadores/Potencia_3.png</normaloff>Calculadora Python/Iconos/Operadores/Potencia_3.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnParDer">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>140</y>
+      <width>65</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(170,170,170);
+border-radius: 10px;
+}
+QPushButton:pressed {
+background-color: rgb(120,120, 120);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Calculadora Python/Iconos/Operadores/ParDer.png</normaloff>Calculadora Python/Iconos/Operadores/ParDer.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnPorc">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>140</y>
+      <width>65</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(170,170,170);
+border-radius: 10px;
+}
+QPushButton:pressed {
+background-color: rgb(120,120, 120);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Calculadora Python/Iconos/Operadores/Porcentaje.png</normaloff>Calculadora Python/Iconos/Operadores/Porcentaje.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnParIzq">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>140</y>
+      <width>65</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(170,170,170);
+border-radius: 10px;
+}
+QPushButton:pressed {
+background-color: rgb(120,120, 120);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Calculadora Python/Iconos/Operadores/ParIz.png</normaloff>Calculadora Python/Iconos/Operadores/ParIz.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnFact">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>140</y>
+      <width>65</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(170,170,170);
+border-radius: 10px;
+}
+QPushButton:pressed {
+background-color: rgb(120,120, 120);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Calculadora Python/Iconos/Operadores/Factorial.png</normaloff>Calculadora Python/Iconos/Operadores/Factorial.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Btn8">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>210</y>
+      <width>65</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(130,130,130);
+border-radius: 10px;
+}
+QPushButton:pressed {
+background-color: rgb(90,90, 90);
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Calculadora Python/Iconos/Números/8.png</normaloff>Calculadora Python/Iconos/Números/8.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Btn7">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>210</y>
+      <width>65</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(130,130,130);
+border-radius: 10px;
+}
+QPushButton:pressed {
+background-color: rgb(90,90, 90);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Calculadora Python/Iconos/Números/7.png</normaloff>Calculadora Python/Iconos/Números/7.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Btn9">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>210</y>
+      <width>65</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(130,130,130);
+border-radius: 10px;
+}
+QPushButton:pressed {
+background-color: rgb(90,90, 90);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Calculadora Python/Iconos/Números/9.png</normaloff>Calculadora Python/Iconos/Números/9.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnSum">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>210</y>
+      <width>65</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(170, 170, 170);
+border-radius: 10px;
+}
+QPushButton:pressed {
+background-color: rgb(120,120, 120);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Calculadora Python/Iconos/Operadores/Suma.png</normaloff>Calculadora Python/Iconos/Operadores/Suma.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Btn5">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>260</y>
+      <width>65</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(130,130,130);
+border-radius: 10px;
+}
+QPushButton:pressed {
+background-color: rgb(90,90, 90);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Calculadora Python/Iconos/Números/5.png</normaloff>Calculadora Python/Iconos/Números/5.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Btn4">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>260</y>
+      <width>65</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(130,130,130);
+border-radius: 10px;
+}
+QPushButton:pressed {
+background-color: rgb(90,90, 90);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Calculadora Python/Iconos/Números/4.png</normaloff>Calculadora Python/Iconos/Números/4.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Btn6">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>260</y>
+      <width>65</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(130,130,130);
+border-radius: 10px;
+}
+QPushButton:pressed {
+background-color: rgb(90,90, 90);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Calculadora Python/Iconos/Números/6.png</normaloff>Calculadora Python/Iconos/Números/6.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnRes">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>260</y>
+      <width>65</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(170,170,170);
+border-radius: 10px;
+}
+QPushButton:pressed {
+background-color: rgb(120,120, 120);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Calculadora Python/Iconos/Operadores/Resta.png</normaloff>Calculadora Python/Iconos/Operadores/Resta.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Btn2">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>310</y>
+      <width>65</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(130,130,130);
+border-radius: 10px;
+}
+QPushButton:pressed {
+background-color: rgb(90,90, 90);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Calculadora Python/Iconos/Números/2.png</normaloff>Calculadora Python/Iconos/Números/2.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Btn1">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>310</y>
+      <width>65</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(130,130,130);
+border-radius: 10px;
+}
+QPushButton:pressed {
+background-color: rgb(90,90, 90);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Calculadora Python/Iconos/Números/1.png</normaloff>Calculadora Python/Iconos/Números/1.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Btn3">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>310</y>
+      <width>65</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(130,130,130);
+border-radius: 10px;
+}
+QPushButton:pressed {
+background-color: rgb(90,90, 90);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Calculadora Python/Iconos/Números/3.png</normaloff>Calculadora Python/Iconos/Números/3.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnMult">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>310</y>
+      <width>65</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(170,170,170);
+border-radius: 10px;
+}
+QPushButton:pressed {
+background-color: rgb(120,120, 120);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Calculadora Python/Iconos/Operadores/Mutiplicación.png</normaloff>Calculadora Python/Iconos/Operadores/Mutiplicación.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnPunto">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>360</y>
+      <width>65</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(170,170,170);
+border-radius: 10px;
+}
+QPushButton:pressed {
+background-color: rgb(120,120, 120);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Calculadora Python/Iconos/Operadores/Punto.png</normaloff>Calculadora Python/Iconos/Operadores/Punto.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>20</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Btn0">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>360</y>
+      <width>65</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(130,130,130);
+border-radius: 10px;
+}
+QPushButton:pressed {
+background-color: rgb(90,90, 90);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Calculadora Python/Iconos/Números/0.png</normaloff>Calculadora Python/Iconos/Números/0.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnDiv">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>360</y>
+      <width>65</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(170,170,170);
+border-radius: 10px;
+}
+QPushButton:pressed {
+background-color: rgb(120,120, 120);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Calculadora Python/Iconos/Operadores/Dividir.png</normaloff>Calculadora Python/Iconos/Operadores/Dividir.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnResultado">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>360</y>
+      <width>65</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(170, 170, 255);
+border-radius: 10px;
+}
+QPushButton:pressed {
+background-color: rgb(170, 85, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Calculadora Python/Iconos/Operadores/Igual.png</normaloff>Calculadora Python/Iconos/Operadores/Igual.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>35</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="Line" name="Separador1">
+    <property name="geometry">
+     <rect>
+      <x>-3</x>
+      <y>70</y>
+      <width>391</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="Separador2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>190</y>
+      <width>381</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="Separador3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>410</y>
+      <width>381</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
